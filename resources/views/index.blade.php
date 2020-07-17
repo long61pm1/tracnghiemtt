@@ -74,9 +74,40 @@
             <h3 class="panel-title">Bảng Điểm</h3>
         </div>
         <div class="panel-body" style="height: 300px;">
-            <?php
-            //vòng lặp load thông tin điểm của học sinh
-            ?>
+            <table class="table">
+                <thead>
+                <tr>
+                    <th style="text-align: center">Bài</th>
+                    <th style="text-align: center">Điểm</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Bài 1</td>
+                    <td>Defaultson</td>
+                </tr>
+                <tr class="success">
+                    <td>1</td>
+                    <td>Doe</td>
+                </tr>
+                <tr class="danger">
+                    <td>1</td>
+                    <td>Moe</td>
+                </tr>
+                <tr class="info">
+                    <td>1</td>
+                    <td>Dooley</td>
+                </tr>
+                <tr class="warning">
+                    <td>1</td>
+                    <td>Refs</td>
+                </tr>
+                <tr class="active">
+                    <td>1</td>
+                    <td>Activeson</td>
+                </tr>
+                </tbody>
+            </table>
         </div>
     </div>
 </div>
