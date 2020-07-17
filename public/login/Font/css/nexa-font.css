@@ -1,0 +1,35 @@
+/*--
+-----------------------------------------------------------
+VAB FONT LICENSE
+-----------------------------------------------------------
+--*/
+@font-face {
+	font-family: 'Nexa-Bold';
+	src:url('../fonts/Nexa Bold.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Nexa-Light';
+	src:url('../fonts/Nexa Light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Nexa-Regular-Italic';
+	src:url('../fonts/Nexa Regular Italic.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Nexa-Heavy';
+	src:url('../fonts/NexaHeavy.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Nexa-Regular';
+	src:url('../fonts/NexaRegular.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
