@@ -38,7 +38,7 @@
                         <td class="col-lg-2">
                             <a class="btn btn-info" data-toggle="modal" href="{{URL::to('/edit-cau-hoi/'.$cau_hoi->question_id)}}">Sửa</a>
                             <a onclick="return confirm('bạn có chắc chắn muốn xóa câu này không?')" class="btn btn-danger" data-toggle="modal" href="{{URL::to('/delete-cau-hoi/'.$cau_hoi->question_id)}}">xóa</a>
-                        </td>
+                        </td></tr>
                     @endforeach
                     </tbody>
                 </table>
