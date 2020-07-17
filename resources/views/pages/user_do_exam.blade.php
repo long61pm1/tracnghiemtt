@@ -7,7 +7,7 @@
             </div>
             <div class="panel-body" id="lambai">
 
-                <form action="{{URL::to('/nop-bai')}}" method="post" role="form">
+                <form action="{{URL::to('/save-exam')}}" method="post" role="form">
                     <div class="overflow-bt scrollbar">
                         <div class="panel panel-default rlambai">
                             <?php $count = 1; ?>

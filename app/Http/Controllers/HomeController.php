@@ -53,10 +53,7 @@ class HomeController extends Controller
         return Redirect::to('/');
     }
 
-    public function nop_bai(Request $request){
-//        foreach ($request as $key){
-//            var_dump($key);
-//        }
-        echo '1';
+    public function save_exam(){
+
     }
 }

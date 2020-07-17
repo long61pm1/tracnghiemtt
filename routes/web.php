@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'HomeController@login');
 Route::get('/home', 'HomeController@index');
 Route::post('/user-dashboard', 'HomeController@user_dashboard');
-Route::post('/nop-bai', 'HomeController@nop_bai');
+Route::post('/save-exam', 'HomeController@save_exam');
 Route::get('/user-logout','HomeController@logout');
 Route::get('/do-exam','HomeController@do_exam');
 
