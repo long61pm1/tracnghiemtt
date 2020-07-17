@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Cpanel - Trắc Nghiệm Online</title>
+    <link rel="icon" href="{{asset('public/login/img/logo.png')}}" type="image/x-icon">
+    <link rel="SHORTCUT ICON" href="{{asset('public/login/img/logo.png')}}" type="image/x-icon">
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="public/admin/css/style.css">
 </head>

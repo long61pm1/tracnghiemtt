@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hệ Thống Trắc Nghiệm Online</title>
+    <link rel="icon" href="{{asset('public/login/img/logo.png')}}" type="image/x-icon">
+    <link rel="SHORTCUT ICON" href="{{asset('public/login/img/logo.png')}}" type="image/x-icon">
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="public/admin/css/style.css">
 </head>
@@ -79,64 +81,64 @@
     </div>
 </div>
 <!-- Kết thúc bảng điểm -->
-{{--@yield('user-content')--}}
-<div class="col-lg-7">
-    <div class="panel panel-info">
-        <div class="panel-heading">
-            <h3 class="panel-title">Làm Bài Tập Chương 1</h3>
-        </div>
-        <div class="panel-body" id="lambai">
-            <form action="?nop_bai" method="POST" role="form">
-                <div class="overflow-bt scrollbar">
-                    <input type="hidden" name="unit" value="">
-                    <input type="hidden" name="tong_so_ch" value="">
-                    <?php
-                    // vòng lặp load các câu hỏi ra
-//                    for ($i = 0; $i < $ts_ch; $i++) {?>
-                    <div class="panel panel-default rlambai">
-                        <div class="panel-body lambai">
-                            <h3 class="panel-title">
-                                Câu
+@yield('user-content')
+{{--<div class="col-lg-7">--}}
+{{--    <div class="panel panel-info">--}}
+{{--        <div class="panel-heading">--}}
+{{--            <h3 class="panel-title">Làm Bài Tập Chương 1</h3>--}}
+{{--        </div>--}}
+{{--        <div class="panel-body" id="lambai">--}}
+{{--            <form action="?nop_bai" method="POST" role="form">--}}
+{{--                <div class="overflow-bt scrollbar">--}}
+{{--                    <input type="hidden" name="unit" value="">--}}
+{{--                    <input type="hidden" name="tong_so_ch" value="">--}}
+{{--                    <?php--}}
+{{--                    // vòng lặp load các câu hỏi ra--}}
+{{--//                    for ($i = 0; $i < $ts_ch; $i++) {?>--}}
+{{--                    <div class="panel panel-default rlambai">--}}
+{{--                        <div class="panel-body lambai">--}}
+{{--                            <h3 class="panel-title">--}}
+{{--                                Câu--}}
 {{--                                <?=$i+1?> - #<?=$cau_hoi[$i]->id_cauhoi?> :   <?=$cau_hoi[$i]->cau_hoi?>--}}
-                            <!-- $cau_hoi[$i]->id_cauhoi hiển thị id câu hỏi thứ i -->
-                                <!-- $cau_hoi[$i]->cau_hoi hiển thị nội dung câu hỏi thứ i -->
-                            </h3>
-                            <input type="hidden" name="id_ch_<$i?>" value="id_cauhoi">
-                        <!-- id_ch_<$i?> sẽ nhận giá trị id câu hỏi (<$cau_hoi[$i]->id_cauhoi?>) để truyền qua view kết qua bài làm thông qua phương thức POST-->
-                            <ul>
-                                <li>
-                                    <input type="radio" name="da_i" value="<$cau_hoi[$i]->da_1?>">
-                                    <label><$cau_hoi[$i]->da_1?></label>
-                                    <!-- hiển thị đáp án 1 -->
-                                </li>
-                                <li>
-                                    <input type="radio" name="da_<$i?>" value="<cau_ho[$i]->da_2?>">
-                                    <label>$cau_hoi[$i]->da_2?></label>
-                                    <!-- hiển thị đáp án 2 -->
-                                </li>
-                                <li>
-                                    <input type="radio" name="da_<$i?>" value="<$cau_hoi[$i]->da_3?>">
-                                    <label><cau_hoi[$i]->da_3?></label>
-                                    <!-- hiển thị đáp án 3 -->
-                                </li>
-                                <li>
-                                    <input type="radio" name="da_<$i?>" value="<$cau_hoi[$i]->da_4?>">
-                                    <label><cau_hoi[$i]->da_4?></label>
-                                    <!-- hiển thị đáp án 4 -->
-                                </li>
-                            <!-- da_<$i?> sẽ nhận đáp án của câu hỏi có id là id_ch_<$i?> mà học sinh trả lời để gửi qua view kết quả qua phương thức POST-->
-                            </ul>
-                        </div>
-                    </div>
-                    <?php
-                    ?>
-                </div>
-                <button type="submit" name="nopbai" class="btn btn-success btn-nopbai" value="true">Nộp Bài</button>
-                <a href="?" class="btn btn-success btn-nopbai">Quay lại!</a>
-            </form>
-        </div>
-    </div>
-</div><!-- Kết thúc làm bài tập -->
+{{--                            <!-- $cau_hoi[$i]->id_cauhoi hiển thị id câu hỏi thứ i -->--}}
+{{--                                <!-- $cau_hoi[$i]->cau_hoi hiển thị nội dung câu hỏi thứ i -->--}}
+{{--                            </h3>--}}
+{{--                            <input type="hidden" name="id_ch_<$i?>" value="id_cauhoi">--}}
+{{--                        <!-- id_ch_<$i?> sẽ nhận giá trị id câu hỏi (<$cau_hoi[$i]->id_cauhoi?>) để truyền qua view kết qua bài làm thông qua phương thức POST-->--}}
+{{--                            <ul>--}}
+{{--                                <li>--}}
+{{--                                    <input type="radio" name="da_i" value="<$cau_hoi[$i]->da_1?>">--}}
+{{--                                    <label><$cau_hoi[$i]->da_1?></label>--}}
+{{--                                    <!-- hiển thị đáp án 1 -->--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <input type="radio" name="da_<$i?>" value="<cau_ho[$i]->da_2?>">--}}
+{{--                                    <label>$cau_hoi[$i]->da_2?></label>--}}
+{{--                                    <!-- hiển thị đáp án 2 -->--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <input type="radio" name="da_<$i?>" value="<$cau_hoi[$i]->da_3?>">--}}
+{{--                                    <label><cau_hoi[$i]->da_3?></label>--}}
+{{--                                    <!-- hiển thị đáp án 3 -->--}}
+{{--                                </li>--}}
+{{--                                <li>--}}
+{{--                                    <input type="radio" name="da_<$i?>" value="<$cau_hoi[$i]->da_4?>">--}}
+{{--                                    <label><cau_hoi[$i]->da_4?></label>--}}
+{{--                                    <!-- hiển thị đáp án 4 -->--}}
+{{--                                </li>--}}
+{{--                            <!-- da_<$i?> sẽ nhận đáp án của câu hỏi có id là id_ch_<$i?> mà học sinh trả lời để gửi qua view kết quả qua phương thức POST-->--}}
+{{--                            </ul>--}}
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                    <?php--}}
+{{--                    ?>--}}
+{{--                </div>--}}
+{{--                <button type="submit" name="nopbai" class="btn btn-success btn-nopbai" value="true">Nộp Bài</button>--}}
+{{--                <a href="?" class="btn btn-success btn-nopbai">Quay lại!</a>--}}
+{{--            </form>--}}
+{{--        </div>--}}
+{{--    </div>--}}
+{{--</div><!-- Kết thúc làm bài tập -->--}}
 <?php
 
 
@@ -160,7 +162,7 @@
             <ul class="nav navbar-nav">
                 <li>
                     <a>Hệ Thống Trắc Nghiệm Online<br />
-                        Hoàn thành ngày 20/09/2017<br />
+                        Hoàn thành 07/2020<br />
                         Lớp 61PM1</a>
                 </li>
             </ul>
