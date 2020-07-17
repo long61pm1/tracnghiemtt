@@ -6,7 +6,7 @@
         <div class="alert">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Thêm Tài Khoản Admin</h3>
+                    <h3 class="panel-title">Sửa Tài Khoản Admin</h3>
                 </div>
                 <div class="panel-body overflow">
                     @foreach($edit_admin_account as $key => $edit_value)

@@ -155,23 +155,6 @@
 </div>
 <!-- Kết thúc bảng điểm -->
 @yield('user-content')
-<?php
-
-
-?>
-{{--<div class="col-lg-7">--}}
-{{--    <div class="panel panel-danger">--}}
-{{--        <div class="panel-heading">--}}
-{{--            <h3 class="panel-title">Lỗi!</h3>--}}
-{{--        </div>--}}
-{{--        <div class="panel-body overflow-hs">--}}
-{{--            Bài tập không tồn tại hoặc đã làm xong, vui lòng kiểm tra lại hoặc liên hệ giáo viên.<br /><br />--}}
-{{--            <a href="?"><button type="button" class="btn btn-info">Quay Lại</button></a>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</div><!-- Kết thúc báo lỗi bài tập -->--}}
-
-<!-- Kết thúc Sidebar trái -->
 <div class="col-lg-12" style="position: fixed; bottom: 10px;">
     <nav class="navbar navbar-default navbar-static-top foot font" style=" margin-bottom: 0px !important;"
          role="navigation">
@@ -191,14 +174,6 @@
         </div><!-- /.navbar-collapse -->
     </nav>
 </div>
-<!-- Kết thúc footer -->
-<script type="text/javascript">
-    $(document).ready(function () {
-        if (!$.browser.webkit) {
-            $('.table-fixed').html('<p>Trình duyệt không hỗ trợ Scrollbar. :(</p>');
-        }
-    });
-</script>
 <script src="{{asset('public/admin/js/jquery.js')}}"></script>
 <script src="{{asset('public/admin/js/bootstrap.min.js')}}"></script>
 </body>

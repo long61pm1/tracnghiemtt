@@ -7,7 +7,8 @@
     <link rel="icon" href="{{asset('public/login/img/logo.png')}}" type="image/x-icon">
     <link rel="SHORTCUT ICON" href="{{asset('public/login/img/logo.png')}}" type="image/x-icon">
     <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="public/admin/css/style.css">
+    <link rel="stylesheet" href="{{asset('public/admin/css/style.css')}}">
+    <link rel="stylesheet" href="{{asset('public/admin/css/normalize.css')}}">
 </head>
 <body style="overflow-x: hidden;">
 <div class="col-lg-12" style="margin-top: 1%">
@@ -73,11 +74,10 @@
         <div class="panel-body">
             <a class="btn btn-max btn-success" href="{{URL::to('/admin-manager')}}">Quản lý thông tin
                 Admin</a><br/><br/>
-            <a class="btn btn-max btn-success" href="?admin=ql_giao_vien">Quản lý Giáo Viên</a><br/><br/>
-            <a class="btn btn-max btn-success" href="?admin=ql_lop">Quản lý Lớp</a><br/><br/>
-            <a class="btn btn-max btn-success" href="?admin=ql_hoc_sinh">Quản lý Học Sinh</a><br/><br/>
+            <a class="btn btn-max btn-success" href="{{URL::to('/admin-manager-user')}}">Quản lý người dùng</a><br/><br/>
             <a class="btn btn-max btn-success" href="{{URL::to('/admin-manager-question')}}">Quản lý Câu Hỏi</a><br/><br/>
-            <a class="btn btn-max btn-success" href="?admin=admin_gui_tb">Gửi Thông Báo</a><br/><br/>
+            <a class="btn btn-max btn-success" href="?">Quản lý chat</a><br/><br/>
+            <a class="btn btn-max btn-success" href="#">Gửi Thông Báo</a><br/><br/>
         </div>
     </div>
     <!-- Kết thúc menu -->

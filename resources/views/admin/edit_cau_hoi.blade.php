@@ -1,6 +1,6 @@
 @extends('admin_layout')
 @section('admin_content')
-    <div class="col-lg-12">
+    <div class="col-lg-10">
         <div class="panel panel-info">
             <div class="panel-heading">
                 <h3 class="panel-title">Thêm Câu Hỏi</h3>

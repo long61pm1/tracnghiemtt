@@ -32,6 +32,13 @@ Route::post('/update-admin-account/{admin_id}','AdminController@update_admin_acc
 Route::get('/edit-admin-account/{admin_id}','AdminController@edit_admin_account');
 Route::get('/delete-admin-account/{admin_id}','AdminController@delete_admin_account');
 
+//users
+Route::get('/admin-manager-user','UserController@manager_user');
+Route::post('/save-user-account','UserController@save_user_account');
+Route::get('/delete-user-account/{user_id}','UserController@delete_user_account');
+Route::get('/edit-user-account/{user_id}','UserController@edit_user_account');
+Route::post('/update-user-account/{user_id}','UserController@update_user_account');
+
 //question
 Route::get('/admin-manager-question','QuestionController@manager_question');
 Route::post('/add-question','QuestionController@add_question');
