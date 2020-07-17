@@ -41,7 +41,7 @@ class HomeController extends Controller
             return Redirect::to('/home');
         } else {
             Session::put('message', 'Tài khoản hoặc mật khẩu sai');
-            return Redirect::to('/');
+                return Redirect::to('/');
         }
     }
 
