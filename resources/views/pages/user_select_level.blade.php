@@ -16,11 +16,17 @@
                         height: 690px;
                     }
 
+                    .wrapper img {
+                        width: 200px; /* width of container */
+                        height: 200px; /* height of container */
+                        object-fit: cover;
+                        border: 5px solid black;
+                    }
+
                     .box {
-                        background-color: #444;
                         color: #fff;
                         border-radius: 5px;
-                        padding: 20px;
+                        /*padding: 60px;*/
                         font-size: 150%;
                         margin: 10%;
                         text-align: center;
@@ -28,27 +34,38 @@
                     }
                 </style>
                 <div class="wrapper">
-                    <a href="{{URL::to('/do-exam')}}"><div class="box a">Bài 1</div></a>
-                    <a href="#"><div class="box b">Bài 2</div></a>
-                    <a href="#"><div class="box c">Bài 3</div></a>
-                    <a href="#"><div class="box d">Bài 4</div></a>
-                    <a href="#"><div class="box e">Bài 5</div></a>
-                    <a href="#"><div class="box f">Bài 6</div></a>
+                    <a href="{{URL::to('/do-exam')}}">
+                        <div class="box">
+                            <div style="position: absolute;left: 14%;top: 14%; font-size: 36px">Bài 1</div>
+                            <<img src="{{asset('public/user/img/bg1.jpg')}}"></div>
+                    </a>
+                    <a href="#">
+                        <div class="box">
+                            <div style="position: absolute;left: 47%;top: 14%; font-size: 36px">Bài 2</div>
+                            <img src="{{asset('public/user/img/bg2.jpg')}}"></div>
+                    </a>
+                    <a href="#">
+                        <div class="box">
+                            <div style="position: absolute;left: 79%;top: 14%; font-size: 36px">Bài 3</div>
+                            <img src="{{asset('public/user/img/bg3.jpg')}}"></div>
+                    </a>
+                    <a href="#">
+                        <div class="box">
+                            <div style="position: absolute;left: 14%;bottom: 23%; font-size: 36px">Bài 4</div>
+                            <img src="{{asset('public/user/img/bg4.jpg')}}"></div>
+                    </a>
+                    <a href="#">
+                        <div class="box">
+                            <div style="position: absolute;left: 47%;bottom: 23%; font-size: 36px">Bài 5</div>
+                            <img src="{{asset('public/user/img/bg5.jpeg')}}"></div>
+                    </a>
+                    <a href="#">
+                        <div class="box">
+                            <div style="position: absolute;left: 79%;bottom: 23%; font-size: 36px">Bài 6</div>
+                            <img src="{{asset('public/user/img/bg6.jpg')}}"></div>
+                    </a>
                 </div>
             </div>
         </div>
     </div><!-- Kết thúc làm bài tập -->
 @endsection
-$table->increments('user_id');
-$table->string('user_username');
-$table->string('user_password');
-$table->string('user_name');
-$table->string('user_phone');
-$table->string('user_avatar');
-$table->string('score_1');
-$table->string('score_2');
-$table->string('score_3');
-$table->string('score_4');
-$table->string('score_5');
-$table->string('score_6');
-$table->timestamps();

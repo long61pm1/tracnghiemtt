@@ -84,27 +84,69 @@
                 <tbody>
                 <tr>
                     <td>Bài 1</td>
-                    <td>Defaultson</td>
+                    <td>
+                        <?php
+                        $name = Session::get('score_1');
+                        if ($name) {
+                            echo $name.'/10';
+                        }
+                        ?>
+                    </td>
                 </tr>
                 <tr class="success">
-                    <td>1</td>
-                    <td>Doe</td>
+                    <td>Bài 2</td>
+                    <td>
+                        <?php
+                        $name = Session::get('score_2');
+                        if ($name) {
+                            echo $name.'/10';
+                        }
+                        ?>
+                    </td>
                 </tr>
                 <tr class="danger">
-                    <td>1</td>
-                    <td>Moe</td>
+                    <td>Bài 3</td>
+                    <td>
+                        <?php
+                        $name = Session::get('score_3');
+                        if ($name) {
+                            echo $name.'/10';
+                        }
+                        ?>
+                    </td>
                 </tr>
                 <tr class="info">
-                    <td>1</td>
-                    <td>Dooley</td>
+                    <td>Bài 4</td>
+                    <td>
+                        <?php
+                        $name = Session::get('score_4');
+                        if ($name) {
+                            echo $name.'/10';
+                        }
+                        ?>
+                    </td>
                 </tr>
                 <tr class="warning">
-                    <td>1</td>
-                    <td>Refs</td>
+                    <td>Bài 5</td>
+                    <td>
+                        <?php
+                        $name = Session::get('score_5');
+                        if ($name) {
+                            echo $name.'/10';
+                        }
+                        ?>
+                    </td>
                 </tr>
                 <tr class="active">
-                    <td>1</td>
-                    <td>Activeson</td>
+                    <td>Bài 6</td>
+                    <td>
+                        <?php
+                        $name = Session::get('score_6');
+                        if ($name) {
+                            echo $name.'/10';
+                        }
+                        ?>
+                    </td>
                 </tr>
                 </tbody>
             </table>
@@ -116,7 +158,7 @@
 <?php
 
 
-	?>
+?>
 {{--<div class="col-lg-7">--}}
 {{--    <div class="panel panel-danger">--}}
 {{--        <div class="panel-heading">--}}
@@ -131,18 +173,19 @@
 
 <!-- Kết thúc Sidebar trái -->
 <div class="col-lg-12" style="position: fixed; bottom: 10px;">
-    <nav class="navbar navbar-default navbar-static-top foot font" style=" margin-bottom: 0px !important;" role="navigation">
+    <nav class="navbar navbar-default navbar-static-top foot font" style=" margin-bottom: 0px !important;"
+         role="navigation">
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                 <li>
-                    <a>Hệ Thống Trắc Nghiệm Online<br />
-                        Hoàn thành 07/2020<br />
+                    <a>Hệ Thống Trắc Nghiệm Online<br/>
+                        Hoàn thành 07/2020<br/>
                         Lớp 61PM1</a>
                 </li>
             </ul>
             <!-- Kết thúc thông tin phiên bản -->
             <ul class="nav navbar-nav navbar-right" style="margin-right: 15px">
-                <li><a>Phát triển:<br />Đào Công Long (long143961@nuce.edu.vn)<br />55 Giải Phóng, HBT, HN<br /></a></li>
+                <li><a>Phát triển:<br/>Đào Công Long (long143961@nuce.edu.vn)<br/>55 Giải Phóng, HBT, HN<br/></a></li>
             </ul>
             <!-- Kết thúc thông tin nhóm thực hiện -->
         </div><!-- /.navbar-collapse -->

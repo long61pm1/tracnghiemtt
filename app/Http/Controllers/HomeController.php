@@ -38,6 +38,12 @@ class HomeController extends Controller
             Session::put('user_id', $result->user_id);
             Session::put('user_username', $result->user_username);
             Session::put('user_name', $result->user_name);
+            Session::put('score_1', $result->score_1);
+            Session::put('score_2', $result->score_2);
+            Session::put('score_3', $result->score_3);
+            Session::put('score_4', $result->score_4);
+            Session::put('score_5', $result->score_5);
+            Session::put('score_6', $result->score_6);
             return Redirect::to('/home');
         } else {
             Session::put('message', 'Tài khoản hoặc mật khẩu sai');
@@ -50,6 +56,12 @@ class HomeController extends Controller
         Session::put('user_id', null);
         Session::put('user_username', null);
         Session::put('user_name', null);
+        Session::put('score_1', null);
+        Session::put('score_2', null);
+        Session::put('score_3', null);
+        Session::put('score_4', null);
+        Session::put('score_5', null);
+        Session::put('score_6', null);
         return Redirect::to('/');
     }
 
