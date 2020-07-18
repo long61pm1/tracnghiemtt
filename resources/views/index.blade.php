@@ -7,7 +7,7 @@
     <link rel="icon" href="{{asset('public/login/img/logo.png')}}" type="image/x-icon">
     <link rel="SHORTCUT ICON" href="{{asset('public/login/img/logo.png')}}" type="image/x-icon">
     <!-- Latest compiled and minified CSS & JS -->
-    <link rel="stylesheet" href="public/admin/css/style.css">
+    <link rel="stylesheet" href="{{asset('public/admin/css/style.css')}}">
 </head>
 <body style="overflow-x: hidden;">
 <div class="col-lg-12" style="margin-top: 1%">

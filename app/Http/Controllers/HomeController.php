@@ -21,10 +21,11 @@ class HomeController extends Controller
         return view('user_login');
     }
 
-    public function do_exam()
+    public function do_exam($number_id)
     {
-        $all_question = DB::table('tbl_cau_hoi')->where('question_number','1')->get();
+        $all_question = DB::table('tbl_cau_hoi')->where('question_number',$number_id)->get();
         $manager_question = view('pages.user_do_exam')->with('all_question',$all_question);
+        Session::put('question_number',$number_id);
         return view('index')->with('pages.user_do_exam',$manager_question);
     }
 
@@ -65,7 +66,32 @@ class HomeController extends Controller
         return Redirect::to('/');
     }
 
-    public function save_exam(){
-
+    public function save_exam(Request $request){
+        $result = DB::table('tbl_cau_hoi')->where('question_number', Session::get('question_number'))->get();
+//        echo '<pre>';
+//        print_r($result);
+//        echo '</pre>';
+        $score = 0;
+        $data = array();
+        for ($i=1;$i<=10;$i++){
+            $string = 'cau'.$i;
+            $answer = 'da_'.$request->$string;
+            foreach ($result as $key=>$cau_hoi){
+                if ($cau_hoi->question_id == $request->$string){
+                    if ($cau_hoi->question_true == $request->$answer){
+                        $score++;
+                    }
+                }
+            }
+        }
+        $data['score_'.Session::get('question_number')] = $score;
+        DB::table('tbl_user')->where('user_id',Session::get('user_id'))->update($data);
+        Session::put('message','Số điểm bạn đạt được là: '.$score.' điểm');
+        Session::put('score_'.Session::get('question_number'), $score);
+        return Redirect::to('/home');
+//        echo $score;
+//        echo Session::get('user_id');
+//        return $request;
+//        return Session::get('question_number');
     }
 }

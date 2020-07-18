@@ -6,8 +6,8 @@
                 <h3 class="panel-title">Làm Bài Tập 1</h3>
             </div>
             <div class="panel-body" id="lambai">
-
                 <form action="{{URL::to('/save-exam')}}" method="post" role="form">
+                    {{csrf_field()}}
                     <div class="overflow-bt scrollbar">
                         <div class="panel panel-default rlambai">
                             <?php $count = 1; ?>
@@ -16,24 +16,25 @@
                                     <h3 class="panel-title">
                                         Câu <?php echo $count; ?> : {{$cau_hoi->question_title}}
                                     </h3>
+                                    <input type="hidden" name="<?php echo 'cau'.$count; ?>" value="{{$cau_hoi->question_id}}">
                                     <ul>
                                         <li>
-                                            <input type="radio" name="{{$cau_hoi->question_id}}" value="A">
+                                            <input type="radio" name="da_{{$cau_hoi->question_id}}" value="A">
                                             <label>A : {{$cau_hoi->question_A}}</label>
                                             <!-- hiển thị đáp án 1 -->
                                         </li>
                                         <li>
-                                            <input type="radio" name="{{$cau_hoi->question_id}}" value="B">
+                                            <input type="radio" name="da_{{$cau_hoi->question_id}}" value="B">
                                             <label>B : {{$cau_hoi->question_B}}</label>
                                             <!-- hiển thị đáp án 2 -->
                                         </li>
                                         <li>
-                                            <input type="radio" name="{{$cau_hoi->question_id}}" value="C">
+                                            <input type="radio" name="da_{{$cau_hoi->question_id}}" value="C">
                                             <label>C : {{$cau_hoi->question_C}}</label>
                                             <!-- hiển thị đáp án 3 -->
                                         </li>
                                         <li>
-                                            <input type="radio" name="{{$cau_hoi->question_id}}" value="D">
+                                            <input type="radio" name="da_{{$cau_hoi->question_id}}" value="D">
                                             <label>D : {{$cau_hoi->question_D}}</label>
                                             <!-- hiển thị đáp án 4 -->
                                         </li>
@@ -43,8 +44,8 @@
                             @endforeach
                         </div>
                     </div>
-                    <a href="{{URL::to('/home')}}" class="btn btn-success btn-nopbai">Quay lại!</a>
-                    <button type="submit" name="nopbai" class="btn btn-success btn-nopbai" >Nộp Bài</button>
+                    <a href="{{URL::to('/home')}}" onclick="return confirm('bạn có chắc chắn muốn thoái bài khi chưa hoàn thành không?')" class="btn btn-success btn-nopbai">Quay lại!</a>
+                    <button type="submit" name="nopbai" class="btn btn-success btn-nopbai" value="true">Nộp Bài</button>
                 </form>
             </div>
         </div>
