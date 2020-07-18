@@ -25,6 +25,7 @@ class AdminController extends Controller
             Session::put('admin_id',$result->admin_id);
             Session::put('admin_username',$result->admin_username);
             Session::put('admin_name',$result->admin_name);
+            Session::put('admin_avatar',$result->admin_avatar);
             return Redirect::to('/admin_dashboard');
         }else{
             Session::put('message','Tài khoản hoặc mật khẩu sai');
@@ -35,6 +36,7 @@ class AdminController extends Controller
         Session::put('admin_id',null);
         Session::put('admin_username',null);
         Session::put('admin_name',null);
+        Session::put('admin_avatar',null);
         return Redirect::to('/admin');
     }
 
@@ -50,6 +52,7 @@ class AdminController extends Controller
         $data['admin_password'] = md5($request->admin_password);
         $data['admin_name'] = $request->admin_name;
         $data['admin_phone'] = $request->admin_phone;
+        $data['admin_avatar'] = "ava_default.jpg";
 
         DB::table('tbl_admin')->insert($data);
         Session::put('message','Thêm thành công');

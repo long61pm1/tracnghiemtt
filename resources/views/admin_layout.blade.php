@@ -40,7 +40,7 @@
         </div>
         <div class="panel-body">
             <div class="col-lg-5">
-                <img src="{{asset('public/admin/img/logo.png')}}" style="width: 95px;">
+                <img src="{{asset('public/admin/img/'.Session::get('admin_avatar'))}}" style="width: 95px;">
             </div>
             <div class="col-lg-7">
                 <br/>

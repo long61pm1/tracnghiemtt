@@ -37,15 +37,17 @@
         <div class="panel-heading">
             <h3 class="panel-title">Thông tin tài khoản</h3>
         </div>
+        <?php
+        use Illuminate\Support\Facades\Session;
+        ?>
         <div class="panel-body">
             <div class="col-lg-5">
-                <img src="{{asset('public/admin/img/logo.png')}}" style="width: 95px;">
+                <img src="{{asset('public/admin/img/'.Session::get('user_avatar'))}}" style="width: 95px;">
             </div>
             <div class="col-lg-7">
                 <br/>
                 <span>Tài khoản:
                 <?php
-                    use Illuminate\Support\Facades\Session;
                     $username = Session::get('user_username');
                     if ($username) {
                         echo $username;
