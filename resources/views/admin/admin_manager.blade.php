@@ -26,7 +26,8 @@
                             <th class="col-lg-3">Tài Khoản</th>
                             <th class="col-lg-3">Mật Khẩu</th>
                             <th class="col-lg-3">Tên</th>
-                            <th class="col-lg-2">chức năng</th>
+                            <th class="col-lg-2">Số điện thoại</th>
+{{--                            <th class="col-lg-2">chức năng</th>--}}
                         </tr>
                         </thead>
                         <tbody class="scrollbar">
@@ -40,9 +41,10 @@
                             <!-- Mật khẩu không hiện-->
                             <td class="col-lg-3">{{ $ad_acc->admin_name }}</td>
                             <!-- Tên Admin -->
-                            <td class="col-lg-2">
-                                <a class="btn btn-info" data-toggle="modal" href="{{URL::to('/edit-admin-account/'.$ad_acc->admin_id)}}">Sửa</a>
-                                <a onclick="return confirm('bạn có chắc chắn muốn xóa tài khoản này không?')" class="btn btn-danger" data-toggle="modal" href="{{URL::to('/delete-admin-account/'.$ad_acc->admin_id)}}">xóa</a></td>
+                            <td class="col-lg-2">{{ $ad_acc->admin_phone }}</td>
+{{--                            <td class="col-lg-2">--}}
+{{--                                <a class="btn btn-info" data-toggle="modal" href="{{URL::to('/edit-admin-account/'.$ad_acc->admin_id)}}">Sửa</a>--}}
+{{--                                <a onclick="return confirm('bạn có chắc chắn muốn xóa tài khoản này không?')" class="btn btn-danger" data-toggle="modal" href="{{URL::to('/delete-admin-account/'.$ad_acc->admin_id)}}">xóa</a></td>--}}
                         </tr>
                         @endforeach
                         </tbody>

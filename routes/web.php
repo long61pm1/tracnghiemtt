@@ -28,9 +28,9 @@ Route::get('/admin-logout','AdminController@logout');
 
 Route::get('/admin-manager','AdminController@show_manager');
 Route::post('/save-admin-account','AdminController@save_admin_account');
-Route::post('/update-admin-account/{admin_id}','AdminController@update_admin_account');
-Route::get('/edit-admin-account/{admin_id}','AdminController@edit_admin_account');
-Route::get('/delete-admin-account/{admin_id}','AdminController@delete_admin_account');
+//Route::post('/update-admin-account/{admin_id}','AdminController@update_admin_account');
+//Route::get('/edit-admin-account/{admin_id}','AdminController@edit_admin_account');
+//Route::get('/delete-admin-account/{admin_id}','AdminController@delete_admin_account');
 
 //users
 Route::get('/admin-manager-user','UserController@manager_user');
